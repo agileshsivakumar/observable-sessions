@@ -10,12 +10,12 @@ import { Alert } from './_models/alert';
 })
 export class AlertComponent implements OnInit, OnDestroy {
   private alertSubscription: Subscription;
-  public alert: any;
+  public alert: Alert;
 
   constructor(private alertService: AlertService) {}
 
   ngOnInit() {
-    this.alertSubscription = this.alertService.get().subscribe(newAlert => {
+    this.alertSubscription = this.alertService.get().subscribe((newAlert: Alert) => {
       this.alert = newAlert;
     });
   }
