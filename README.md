@@ -1,6 +1,14 @@
 # ObservableSessions
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.0.
+## Code overview
+1. Create service for alert `ng g s alert` which has an alert `Subject` with `push` and `get` methods that sets the subject and returns it
+2. Create a component for the alert `ng g c alert` which subscribes to the alert subject in the `AlertService` and displays it in its HTML
+3. Create a module for the alert `ng g m alert` which exports `AlertComponent`
+4. Optionally create an interface for the alert with `alertMessage` and `alertType` with alertType preferably being an `enum`
+5. Include `AlertModule` in the `AppModule`
+6. Include `AlertComponent` selector `app-alert` in the `app.component.html`
+7. Add few buttons to show different types of alerts in the `app.component.html`
+8. On click of each button push an alert with a message and approproate type to `AlertService#push`
 
 ## Development server
 
@@ -25,3 +33,4 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
