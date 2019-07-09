@@ -8,9 +8,9 @@ import { AlertType } from './alert/_models/alert';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  constructor(private alertService: AlertService) {}
+  constructor(public alertService: AlertService) {}
 
-  pushAlert(alertType: AlertType) {
+  public pushAlert(alertType: AlertType): void {
     this.alertService.push({ message: 'Test Alert', type: alertType });
   }
 }
