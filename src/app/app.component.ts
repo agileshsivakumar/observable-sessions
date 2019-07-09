@@ -7,10 +7,8 @@ import { AlertType } from './alert/_models/alert';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   constructor(private alertService: AlertService) {}
-
-  ngOnInit() {}
 
   pushAlert(alertType: AlertType) {
     this.alertService.push({ message: 'Test Alert', type: alertType });

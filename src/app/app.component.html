@@ -4,16 +4,20 @@
       <div class="col-sm-6">
         <app-alert></app-alert>
         <div class="form-group">
-          <button (click)="pushAlert(0)" class="btn btn-primary">
+          <button (click)="pushAlert('success')" class="btn btn-primary">
             Success!
           </button>
           &nbsp;
-          <button (click)="pushAlert(1)" class="btn btn-primary">
+          <button (click)="pushAlert('error')" class="btn btn-primary">
             Error!
           </button>
           &nbsp;
-          <button (click)="pushAlert(2)" class="btn btn-primary">
+          <button (click)="pushAlert('info')" class="btn btn-primary">
             Info!
+          </button>
+          &nbsp;
+          <button (click)="pushAlert('warning')" class="btn btn-primary">
+            Warning!
           </button>
           &nbsp;
         </div>

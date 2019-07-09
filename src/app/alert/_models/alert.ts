@@ -3,8 +3,4 @@ export interface Alert {
   type: AlertType;
 }
 
-export enum AlertType {
-  success,
-  error,
-  info
-}
+export type AlertType = 'success' | 'error' | 'info' | 'warning';
